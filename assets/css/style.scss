@@ -1,0 +1,22 @@
+---
+# note: will result in an all-in-one-file style sheet e.g. style.css
+---
+
+
+// check for style props settings in _config.yml
+//   lets you overwrite fonts, colors, etc.
+
+{% if site.style %}
+  {% assign style = site.style %}
+
+  {% if style.font_family %}
+    $font-family:    {{ style.font_familiy }};
+  {% endif %}
+
+  {% if style.link_color %}
+    $link-color:     {{ style.link_color }};
+  {% endif %}
+{% endif %}
+
+
+@import 'book-classics-theme';

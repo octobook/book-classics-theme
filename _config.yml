@@ -1,5 +1,5 @@
 ########
-# settings
+# build settings
 
 markdown: kramdown
 
@@ -8,8 +8,9 @@ kramdown:
   hard_wrap: false
 
 sass:
-  sass_dir: css
   style: expanded
 
 exclude:
 - README.md
+- preview.png
+- manuscript

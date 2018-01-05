@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  {% if page.book %}
+     {% assign book = site.data[ page.book ].book %}
+  {% else %}
+     <!-- note: if no book id in page set/configured - use default _data/book.yml -->
+     {% assign book = site.data.book %}
+  {% endif %}
+
+  <title>{{ book.title }}</title>
+    <!-- [[ book.title ]] by [[ book.author.name ]]
+         add author - why? why not?
+         add subtitle / tagline - why? why not?
+         add | site title - why? why not?
+        -->
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="icon"       href="i/favicon.png"         type="image/png">
+</head>
+<body>
+
+<div class="container">
+  {{ content }}
+</div>
+
+</body>
+</html>
